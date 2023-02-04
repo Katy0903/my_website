@@ -20,3 +20,8 @@ body{
     text-align: center;
 
 }
+
+.menu_list{
+    list-style-type: none;
+
+}
