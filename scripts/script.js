@@ -6,3 +6,7 @@ let courseList = [
 ];
 
 
+let usernumber;
+do {
+    usernumber = prompt("Please enter a 4-digit number: ");
+} while (isNaN(usernumber) === true || usernumber.length!=4);
