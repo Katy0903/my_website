@@ -6,24 +6,17 @@ const courselist = [
 ];
 
 
-let usernumber;
-do {
-    usernumber = prompt("Please enter a 4-digit number: ");
-} while (isNaN(usernumber) === true || usernumber.length!=4);
 
+const CourseArray = [];
+    
 
+function createCourseArray(){
 
-let foundCourse = false;
+    for (let i = 0; i < courselist.length; i++) {
+        let newcode = courselist[i].code + ' - ' +courselist[i].name
+        CourseArray.push({code: newcode, date:"Fall 2020"});
+    };
+};
 
-for (let i = 0; i < courselist.length; i++) {
-    if (courselist[i].code.includes(usernumber)) {
-      console.log(`Yes I am taking the course: ${courselist[i].code} - ${courselist[i].name}`);
-      foundCourse = true;
-      break;
-    }
-}
-
-if(foundCourse === false){ 
-    courselist.push({code: usernumber, name: null });
-    console.log(`Successfully adding new course: ${usernumber}!`);
-}
+createCourseArray();
+console.log(CourseArray);

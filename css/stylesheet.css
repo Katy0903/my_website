@@ -85,7 +85,9 @@ h2{
     margin-bottom: 20px;
 }
 
-
+.changeBG{
+    background-color: #dcc9b0;
+}
 
 /* Media query for larger screens */
 @media screen and (min-width: 600px) {
